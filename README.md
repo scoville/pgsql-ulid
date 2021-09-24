@@ -8,6 +8,8 @@ https://dbfiddle.uk/?rdbms=postgres_9.6&fiddle=985458f983029ec46f82d7332d3d514a
 ## Usage
 
 `ulid_to_uuid(ulid text) RETURNS uuid`
+
+Takes a ULID string and returns a UUID.
 ```SQL
 SELECT ulid_to_uuid('01FGB414J8PPBVHBMHGSXGS21C');
 
@@ -15,11 +17,17 @@ SELECT ulid_to_uuid('01FGB414J8PPBVHBMHGSXGS21C');
 ```
 
 `uuid_to_ulid(id uuid) RETURNS text`
+
+Takes a UUID and returns a ULID string.
 ```SQL
 SELECT uuid_to_ulid('017c1640-9248-b597-b8ae-91867b0c882c');
 
 -- 01FGB414J8PPBVHBMHGSXGS21C
 ```
+
+`parse_ulid(ulid text) RETURNS bytea`
+
+Takes a ULID string and returns a Byte Array. In case you need the raw bytes for something else.
 
 ## Inspirations
 - https://github.com/geckoboard/pgulid - Provides generation of ULIDs in Postgres.
