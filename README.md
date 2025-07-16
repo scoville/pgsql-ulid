@@ -4,7 +4,7 @@ Postgres helper functions for converting between [ULID](https://github.com/ulid/
 Your application layer may deal exclusively with transformation of ULIDs, so what do you do when you need to query your DB for something? That's where these handy functions come in!
 
 ## Example
-https://dbfiddle.uk/-o7J4c0_
+[https://dbfiddle.uk/-o7J4c0_](https://dbfiddle.uk/-o7J4c0_)
 ## Usage
 
 `ulid_to_uuid(ulid text) RETURNS uuid`
